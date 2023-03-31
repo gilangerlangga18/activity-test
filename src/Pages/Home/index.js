@@ -24,9 +24,11 @@ function Home() {
       <div className="container">
         <div className="todo-header">
           <h1 data-cy="activity-title">Activity</h1>
-          <button class="bton " onClick={addToDo} data-cy="activity-add-button">
-            <span class="icon-plus"> +</span> Tambah
-          </button>
+          <div onClick={addToDo} data-cy="activity-add-button">
+            <button class="bton ">
+              <span class="icon-plus"> +</span> Tambah
+            </button>
+          </div>
         </div>
         <div className="map-card">
           {todo.length > 0 ? (

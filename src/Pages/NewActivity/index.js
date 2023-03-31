@@ -111,13 +111,11 @@ function NewActivity() {
                   data-cy="todo-sort-button"
                 />
               )}
-              <button
-                class="bton "
-                onClick={clickPlus}
-                data-cy="todo-add-button"
-              >
-                <span class="icon-plus"> +</span> Tambah
-              </button>
+              <div data-cy="todo-add-button" onClick={clickPlus}>
+                <button class="bton" data-cy="todo-add-button">
+                  <span class="icon-plus"> +</span> Tambah
+                </button>
+              </div>
             </div>
           </div>
           <div className="todo-list">
