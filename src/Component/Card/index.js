@@ -22,7 +22,7 @@ function Card({ title, openSuccess }) {
   };
   return (
     <>
-      <div className="col-3">
+      <div>
         <div className="activity-card">
           <div
             class="activity-body"

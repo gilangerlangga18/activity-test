@@ -20,6 +20,8 @@
   display: flex;
   flex-wrap: wrap;
   position: absolute;
+  justify-content: start;
+  gap: 10px;
   width: 100%;
 }
 .add-footer {
