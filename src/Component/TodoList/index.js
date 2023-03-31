@@ -31,13 +31,9 @@ function TodoList({ state, onDelete }) {
               />
             </div>
           </div>
-          <div>
+          <div onClick={() => setModal(true)} data-cy="todo-item-delete-button">
             {" "}
-            <BsFillTrash3Fill
-              className="icon-basket"
-              onClick={() => setModal(true)}
-              data-cy="todo-item-delete-button"
-            />
+            <BsFillTrash3Fill className="icon-basket" />
           </div>
         </div>
       </div>
