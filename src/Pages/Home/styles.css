@@ -1,0 +1,31 @@
+.btn .icon-plus {
+  margin-right: 5px;
+  font-weight: 700;
+}
+.todo-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 43px 0 55px;
+}
+.bton {
+  border-radius: 45px;
+  border: 0;
+  padding: 13.5px 29px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #16abf8;
+  color: #fff;
+}
+.map-card {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  width: 100%;
+}
+.add-footer {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-right: 30px;
+  padding-top: 20px;
+}

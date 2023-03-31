@@ -1,0 +1,25 @@
+.card-footer {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.activity-body {
+  font-size: 18px;
+  font-weight: 700;
+  flex: 1;
+}
+.activity-card {
+  height: 234px;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 22px;
+  margin-bottom: 26px;
+  position: relative;
+  width: 235px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.15);
+  /* border: 1px black solid; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

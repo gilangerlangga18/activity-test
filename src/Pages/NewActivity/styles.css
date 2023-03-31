@@ -1,0 +1,42 @@
+.icon-back {
+  width: 32px;
+  height: 32px;
+}
+.todo-content {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.icon-pencil {
+  width: 20px;
+  height: 20px;
+}
+.todo-content h1 {
+  font-size: 36px;
+  font-weight: 700;
+}
+.todo-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 43px 0 55px;
+}
+.todo-drop {
+  font-size: 36px;
+  font-weight: 700;
+  border-radius: 50%;
+  background-color: rgb(211, 211, 211);
+  padding: 3px;
+}
+.todo-btn {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.todo-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}

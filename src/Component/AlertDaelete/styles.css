@@ -1,0 +1,49 @@
+.delete-body {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.delete-container {
+  width: 600px;
+  height: 355px;
+  background: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.15);
+}
+.delete-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  /* background-color: aqua; */
+  height: 100%;
+}
+.icon-alert {
+  width: 70px;
+  height: 70px;
+  color: #ed4c5c;
+}
+.dealete-body {
+  font-size: 20px;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+}
+.button-batal {
+  background-color: #f4f4f4;
+  color: black;
+}
+.button-hapus {
+  background-color: #ed4c5c;
+}
+.delete-footer {
+  display: flex;
+  gap: 40px;
+}
