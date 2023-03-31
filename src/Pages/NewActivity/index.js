@@ -7,6 +7,7 @@ import TodoList from "../../Component/TodoList";
 import { useNavigate, useParams } from "react-router-dom";
 import { useGlobalContext } from "../../Context/GlobalContext";
 import AddTodo from "../../Component/AddTodo";
+import AlertSucces from "../../Component/AlertSucces";
 
 function NewActivity() {
   const ref = useRef(null);
@@ -27,6 +28,7 @@ function NewActivity() {
     title: "",
     isChangeName: false,
     isOpenModal: false,
+    isOpenInfo: false,
   });
 
   useEffect(() => {
@@ -63,6 +65,14 @@ function NewActivity() {
       isOpenModal: true,
     }));
   };
+
+  const successDelete = () => {
+    setActivity((prev) => ({
+      ...prev,
+      isOpenInfo: true,
+    }));
+  };
+
   return (
     <>
       <div>
@@ -130,6 +140,7 @@ function NewActivity() {
                     state={item}
                     onDelete={(id) => {
                       deleteItem(id);
+                      successDelete();
                     }}
                   />
                 ))}
@@ -153,6 +164,16 @@ function NewActivity() {
           }));
         }}
         submitData={addNewTodo}
+      />
+      <AlertSucces
+        isOpen={activity.isOpenInfo}
+        close={() => {
+          setActivity((prev) => ({
+            ...prev,
+            isOpenModal: false,
+            isOpenInfo: false,
+          }));
+        }}
       />
     </>
   );

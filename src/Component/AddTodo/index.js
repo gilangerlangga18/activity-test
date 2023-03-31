@@ -79,11 +79,12 @@ function AddTodo({ isOpen, close: propCLose, submitData }) {
             <div>
               <Dropdown
                 className="button-drop"
-                data-cy="modal-add-priority-item"
+                data-cy="modal-add-priority-dropdown"
               >
                 <Dropdown.Toggle
                   id="dropdown-autoclose-true"
                   className="toggle-drop"
+                  data-cy="modal-add-priority-item"
                 >
                   <div className={state.className}> </div>
                   <span>{state.title}</span>
