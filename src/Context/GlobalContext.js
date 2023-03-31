@@ -36,6 +36,7 @@ const GlobalContextProvider = (props) => {
       ...prev,
       todo: [results.data, ...prev.todo],
     }));
+    firstGetData();
   };
 
   const deleteActivity = async (id) => {
