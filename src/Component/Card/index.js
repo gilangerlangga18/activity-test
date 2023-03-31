@@ -22,9 +22,13 @@ function Card({ title, openSuccess }) {
   };
   return (
     <>
-      <div className="col-3" data-cy="activity-item">
+      <div className="col-3">
         <div className="activity-card">
-          <div class="activity-body" onClick={NewActivity}>
+          <div
+            class="activity-body"
+            onClick={NewActivity}
+            data-cy="activity-item"
+          >
             <h4 data-cy="activity-item-title">{title.title} </h4>
           </div>
           <div class="card-footer">
