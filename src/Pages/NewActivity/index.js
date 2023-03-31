@@ -91,7 +91,9 @@ function NewActivity() {
                   autoFocus
                 />
               ) : (
-                <h1 data-cy="todo-title">{activity.title}</h1>
+                <h1 data-cy="todo-title" onClick={changeTitleToggle}>
+                  {activity.title}
+                </h1>
               )}
 
               <BsPencil
