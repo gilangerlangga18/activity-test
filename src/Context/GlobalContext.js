@@ -66,14 +66,9 @@ const GlobalContextProvider = (props) => {
   };
 
   const getActivityById = async (id) => {
-    if (state.todo.length > 0) {
-      const item = state.todo.find((item) => item.id === parseInt(id));
-      return item;
-    } else {
-      // Call API
-      const results = await axios.get(baseUrl + "/activity-groups/" + id);
-      return results.data;
-    }
+    // Call API
+    const results = await axios.get(baseUrl + "/activity-groups/" + id);
+    return results.data;
   };
 
   const getListToDoItem = async (id) => {

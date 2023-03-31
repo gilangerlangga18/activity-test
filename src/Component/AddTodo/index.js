@@ -115,6 +115,7 @@ function AddTodo({ isOpen, close: propCLose, submitData }) {
         <ModalFooter className="add-footer">
           <button
             onClick={(e) => {
+              if (!state.name) return;
               e.preventDefault();
               submitData(state.name, state.className);
               close();
