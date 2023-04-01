@@ -84,7 +84,6 @@ function AddTodo({ isOpen, close: propCLose, submitData }) {
                 <Dropdown.Toggle
                   id="dropdown-autoclose-true"
                   className="toggle-drop"
-                  data-cy="modal-add-priority-item"
                 >
                   <div className={state.className}> </div>
                   <span>{state.title}</span>
@@ -92,7 +91,7 @@ function AddTodo({ isOpen, close: propCLose, submitData }) {
                 <DropdownMenu>
                   {priority.map((item) => (
                     <Dropdown.Item
-                      data-cy={`modal-add-priority-${item.className}`}
+                      data-cy="modal-add-priority-item"
                       onClick={() => {
                         setState((prev) => ({
                           ...prev,
