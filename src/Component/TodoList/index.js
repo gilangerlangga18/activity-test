@@ -3,9 +3,12 @@ import { BsFillTrash3Fill } from "react-icons/bs";
 import "./styles.css";
 import { BsPencil } from "react-icons/bs";
 import DeleteAlertTodo from "../AlertDaeleteTodo";
+import { useGlobalContext } from "../../Context/GlobalContext";
 
 function TodoList({ state, onDelete }) {
+  const { updateTodo } = useGlobalContext();
   const [modal, setModal] = useState(false);
+  const [states, setState] = useState(state.is_active);
   return (
     <>
       <div className="detail-content" data-cy="todo-item">
@@ -16,6 +19,12 @@ function TodoList({ state, onDelete }) {
                 class="form-check-input"
                 type={"checkbox"}
                 data-cy="todo-item-checkbox"
+                checked={states === 0}
+                onChange={() => {
+                  const newStates = states === 1 ? 0 : 1;
+                  setState(newStates);
+                  updateTodo(state.id, newStates);
+                }}
               />
               <div
                 data-cy="todo-item-priority-indicator"

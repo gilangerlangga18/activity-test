@@ -93,6 +93,13 @@ const GlobalContextProvider = (props) => {
     }
   };
 
+  const updateTodo = async (id, active) => {
+    // Call API
+    await axios.patch(baseUrl + "/todo-items/" + id, {
+      is_active: active,
+    });
+  };
+
   const deleteTodo = async (id) => {
     // Call API
     await axios.delete(baseUrl + "/todo-items/" + id);
@@ -109,6 +116,7 @@ const GlobalContextProvider = (props) => {
         getActivityById,
         getListToDoItem,
         addNewToDoItem,
+        updateTodo,
         deleteTodo,
       }}
     >
