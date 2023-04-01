@@ -59,7 +59,7 @@ function NewActivity() {
     if (results === null) {
       return;
     }
-    setState([...state, results]);
+    setState([...state, { ...results, is_active: 1 }]);
   };
 
   const clickPlus = () => {

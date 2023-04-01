@@ -8,7 +8,7 @@ import { useGlobalContext } from "../../Context/GlobalContext";
 function TodoList({ state, onDelete }) {
   const { updateTodo } = useGlobalContext();
   const [modal, setModal] = useState(false);
-  const [states, setState] = useState(state.is_active ? 1 : 0);
+  const [states, setState] = useState(state.is_active);
   return (
     <>
       <div className="detail-content" data-cy="todo-item">
