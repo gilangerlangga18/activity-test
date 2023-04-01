@@ -122,6 +122,7 @@ function AddTodo({ isOpen, close: propCLose, submitData }) {
             }}
             class="bton"
             data-cy="modal-add-save-button"
+            disabled={!state.name}
           >
             Simpan
           </button>
