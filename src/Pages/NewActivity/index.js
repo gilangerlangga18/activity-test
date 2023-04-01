@@ -56,6 +56,9 @@ function NewActivity() {
 
   const addNewTodo = async (title, priority) => {
     const results = await addNewToDoItem(id, title, priority);
+    if (results === null) {
+      return;
+    }
     setState([...state, results]);
   };
 

@@ -81,12 +81,16 @@ const GlobalContextProvider = (props) => {
 
   const addNewToDoItem = async (id, title, priority) => {
     // Call API
-    const results = await axios.post(baseUrl + "/todo-items", {
-      activity_group_id: id,
-      title,
-      priority,
-    });
-    return results.data;
+    try {
+      const results = await axios.post(baseUrl + "/todo-items", {
+        activity_group_id: id,
+        title,
+        priority,
+      });
+      return results.data;
+    } catch (error) {
+      return null;
+    }
   };
 
   const deleteTodo = async (id) => {
